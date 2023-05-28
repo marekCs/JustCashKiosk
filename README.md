@@ -1,5 +1,5 @@
 # Just Cash Kiosk - Project Overview
-1. Views:
+1. Views
 
 The user interface of the application should consist of the following Views:
 
@@ -9,7 +9,7 @@ The user interface of the application should consist of the following Views:
     ConfirmationView: This view is displayed after the amount has been selected. It manages the transaction confirmation.
     ReceiptView: This view appears after a successful transaction. It displays the successful purchase and notifies about the issuance of the receipt.
 
-2. ViewModels:
+2. ViewModels
 
 For each of the above Views, there is a corresponding ViewModel:
 
@@ -19,7 +19,9 @@ For each of the above Views, there is a corresponding ViewModel:
     ReceiptViewModel
 
 These ViewModels contain all the necessary logic for interacting with each View.
-3. Services:
+
+
+3. Services
 
 Several services will be needed to interact with external systems:
 
@@ -29,7 +31,9 @@ Several services will be needed to interact with external systems:
     ReceiptPrinterService: Communicates with the receipt printer.
 
 These services will be injected into the ViewModels using AutoFac for dependency management.
-4. Display Button Structure:
+
+
+4. Display Button Structure
 
 The first row has an "About us" button on the left and a "Cash Withdrawal" button on the right.
 
