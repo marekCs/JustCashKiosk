@@ -1,0 +1,64 @@
+﻿<Window x:Class="JustCash.Kiosk.Client.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JustCash.Kiosk.Client.Views" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Just Cash Kisok - Welcome" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+<!--0 Row-->
+        <Button Grid.Row="0" Grid.Column="0" Style="{StaticResource MaterialDesignFlatButton}" Content="About us" Command="{Binding AboutUsCommand}" />
+        <Button Grid.Row="0" Grid.Column="2"  Style="{StaticResource AtmButtonStyle}" Command="{Binding CashWithdrawalCommand}">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="AttachMoney" Width="25" Height="25" VerticalAlignment="Center" Margin="0,0,10,0" />
+                <TextBlock Text="Cash Withdrawal" />
+            </StackPanel>
+        </Button>
+<!--1 Row-->
+        <Button Grid.Row="1" Grid.Column="2" Style="{StaticResource AtmButtonStyle}" Command="{Binding QuickLoanCommand}">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Money100" Width="25" Height="25" VerticalAlignment="Center" Margin="0,0,10,0" />
+                <TextBlock Text="Quick Loan" />
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource AtmButtonStyle}" Command="{Binding WhyBitcoinCommand}">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Explore" Width="25" Height="25" VerticalAlignment="Center" Margin="0,0,10,0" />
+                <TextBlock Text="Why Bitcoin" />
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource AtmButtonStyle}" Command="{Binding MyBitcoinPurchasesCommand}">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Wallet" Width="25" Height="25" VerticalAlignment="Center" Margin="0,0,10,0" />
+                <TextBlock Text="My Bitcoin Purchases" />
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="2" Style="{StaticResource AtmButtonStyle}" Command="{Binding BuyBitcoinCommand}">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Bitcoin" Width="25" Height="25" VerticalAlignment="Center" Margin="0,0,10,0" />
+                <TextBlock Text="Buy Bitcoin" />
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="0" Style="{StaticResource AtmButtonStyle}" Command="{Binding BitcoinPriceChartCommand}">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="ChartHistogram" Width="25" Height="25" VerticalAlignment="Center" Margin="0,0,10,0" />
+                <TextBlock Text="Bitcoin price chart" />
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>
